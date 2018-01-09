@@ -1,0 +1,10 @@
+
+#define 	SALETRAS	10
+#define 	BALANCEINQTRAS	11
+#define 	SETTLEMENTTRAS	12
+#define 	REVERSALTRAS	13
+#define 	BILLINQTRAS	14
+#define 	BILLPAYTRAS	15
+#define 	VOUCHERTRAS	16
+
+
