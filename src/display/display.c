@@ -1,3 +1,5 @@
+#include "display.h"
+
 void initDisp(void)
 {
 

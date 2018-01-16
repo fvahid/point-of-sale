@@ -2,23 +2,24 @@ CC=gcc
 INCLUDES=-Iconnections -Iiso
 
 
-all: connect iso8583 app.bin 
+all: clean iso8583 connect dis app.bin 
 
 clean:
 	make -C connections clean
-	make -C iso clean
 	rm -f app.bin  *.o *~
 
+dis: 
+	make -C display
 
 connect:
-	make -C iso 
+	make -C connections
 
 iso8583:
-	make -C connections
-	
+	make -C iso
+
 app.bin:
 	${CC} -c app.c ${INCLUDES}
-	${CC} -o app.bin app.o connections/connections.o
+	${CC} -o app.bin app.o connections/connections.o display/display.o iso/demo.o
 
 
 	
